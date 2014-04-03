@@ -1,6 +1,6 @@
 RailsLMS::Application.routes.draw do
   # Added API and Doorkeeper
-  root to: 'tasks#index'
+  root to: 'cms/pages#show', id: 1,  template: 'template_2', layout: 'home'
 
   namespace :api, defaults: {format: 'json'} do
     resources :tasks
@@ -18,7 +18,7 @@ RailsLMS::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   namespace :cms do 
-    get "/pages/(:id)/(:template)" => "pages#show"
+    get "/pages/(:id)/(:template)/(:layout)" => "pages#show"
   end
 
   resources :users, path: 'profiles'

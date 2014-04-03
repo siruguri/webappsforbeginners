@@ -1,0 +1,312 @@
+%html
+%head
+  = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+  = javascript_include_tag "application", "data-turbolinks-track" => true
+  = csrf_meta_tags
+
+  %meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}
+
+  %link{href: 'http://fonts.googleapis.com/css?family=Open+Sans', rel: 'stylesheet', type: 'text/css'}
+
+  / Google Analytics tracking
+  %script{type: "text/javascript"}
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-49553224-1', 'webappsforbeginners.com');   ga('send', 'pageview');
+
+%body
+  .container-fluid
+    .row
+      .col-lg-8.col-md-8.col-sm-12.col-xs-12.band1.verticalCenterContainer.grey-right
+
+        .vert-center Web Apps For Beginners 
+
+      .col-lg-4.col-md-4.hidden-sm
+        / This column is empty
+
+    .row
+      .col-lg-4.col-md-4.hidden-sm
+        / This col is empty
+      .col-lg-8.col-md-8.col-sm-12.col-xs-12.band2.verticalCenterContainer.grey-right
+        .vert-center Coding with Ruby on Rails
+
+  / Main content starts here
+  .container
+    .row 
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12.band3
+        .big-font.horiz-center
+          Writing web applications is easier than you think! Our 
+          courses teach you the basic concepts you need to get really
+          comfortable setting up your own favorite apps in the cloud.
+
+    .row.content
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12
+        .big-font
+          Level 1 courses are now open! You can register here: in 
+          %a{href: "http://webappsforbeginnersoak.eventbrite.com/"}
+            Oakland
+          and in
+          %a{href: "http://webappsforbeginnerssf.eventbrite.com"}
+            San Francisco
+
+    .row.content 
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.big-font
+        .pane
+          .heading
+            What Will I Learn?
+	  
+          .para
+            This course will teach you the foundational concepts behind building web applications, using the Ruby on Rails framework to simplify the process. The course has 3 goals:
+            %ol
+              %li To build a simple web app, working with 1-2 other students to go from design to production in 12 weeks.
+              %li To empower you in navigating the abundance of free tutorials, user forums and open source code that you can exploit to go deeper into coding.
+              %li To prepare you to jump into Intermediate and Advanced level course (coming soon!)
+
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.big-font 
+        .pane
+          .heading
+            How Do I Prepare?
+	  
+          .para
+            You should be comfortable using software and computers, bring a laptop, and be ready to read documentation, to type a lot of code, and to spend at least <strong>12-15 hours</strong> a week doing homework.
+
+          .para.small-font
+            Course material, source code, and student logins coming soon... Check back in a few days!
+
+        .pane
+          .heading
+            Not Sure If This Is For You ?
+          .para
+            Come to one of our <a href="2-hr-workshop.html">2 Hour RoR Workshops</a>.
+
+        .pane
+          Instructor:
+          %a{href: "instructor.html"}
+            Sameer Siruguri
+
+  / Begin MailChimp Signup Form
+  .container
+    .row.content
+      .col-lg-12.col-md-12.col-sm-12 
+        #mc_embed_signup
+          / Converting the rest of this as-is
+          <form action="http://dstrategies.us8.list-manage.com/subscribe/post?u=56eeb7fe4b4ba0b4bd232fef1&amp;id=b85b685ced" mehod="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <h4 style="display: inline-block;">Sign up for updates: </h4>
+          <div class="mc-field-group">
+          <label for="mce-EMAIL"></label>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your Email Address">
+          </div>
+          <div id="mce-subscribe-button">
+          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+          </div>
+          <!-- real people should not fill this in and expect good things - do not remove -->
+          <div style="position: absolute; left: -5000px;"><input type="text" name="b_56eeb7fe4b4ba0b4bd232fef1_b85b685ced" value="">
+          </div>
+          <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>    
+          </div>
+          </form>
+
+  / end of content container
+
+  .container
+    .row banded footer
+    .col-lg-6.col-md-6.col-sm-6.col-xs-6
+      Organized by: <a href="http://www.dstrategies.org/">Digital Strategies</a>
+      </div>
+      .col-lg-6.col-md-6.col-sm-6.col-xs-6
+        .right-align
+          Copyright 2014
+
+  :javascript
+    var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';
+    try {
+    var jqueryLoaded=jQuery;
+      jqueryLoaded=true;
+    } catch(err) {
+      var jqueryLoaded=false;
+    }
+    var head= document.getElementsByTagName('head')[0];
+    if (!jqueryLoaded) {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = '//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+      head.appendChild(script);
+
+      if (script.readyState && script.onload!==null) {
+        script.onreadystatechange= function () {
+          if (this.readyState == 'complete') mce_preload_check();
+        }
+      }
+    }
+
+    var err_style = '';
+    try {
+      err_style = mc_custom_error_style;
+    } catch(e){
+      err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
+    }
+
+    var head= document.getElementsByTagName('head')[0];
+    var style= document.createElement('style');
+    style.type= 'text/css';
+
+    if (style.styleSheet) {
+      style.styleSheet.cssText = err_style;
+    } else {
+      style.appendChild(document.createTextNode(err_style));
+    }
+    head.appendChild(style);
+    setTimeout('mce_preload_check();', 250);
+
+    var mce_preload_checks = 0;
+    function mce_preload_check(){
+      if (mce_preload_checks>40) return;
+      mce_preload_checks++;
+      try {
+        var jqueryLoaded=jQuery;
+      } catch(err) {
+        setTimeout('mce_preload_check();', 250);
+        return;
+      }
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+      head.appendChild(script);
+      try {
+        var validatorLoaded=jQuery("#fake-form").validate({});
+      } catch(err) {
+        setTimeout('mce_preload_check();', 250);
+        return;
+      }
+      mce_init_form();
+    }
+    function mce_init_form(){
+      jQuery(document).ready( function($) {
+        var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+        var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
+        $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+        options = { url: 'http://dstrategies.us8.list-manage.com/subscribe/post-json?u=56eeb7fe4b4ba0b4bd232fef1&id=b85b685ced&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+                    beforeSubmit: function(){
+          $('#mce_tmp_error_msg').remove();
+          $('.datefield','#mc_embed_signup').each(
+            function(){
+              var txt = 'filled';
+              var fields = new Array();
+              var i = 0;
+              $(':text', this).each(
+                function(){
+                  fields[i] = this;
+                  i++;
+                });
+              $(':hidden', this).each(
+                function(){
+                  var bday = false;
+                  if (fields.length == 2){
+                    bday = true;
+                    fields[2] = {'value':1970};//trick birthdays into having years
+                  }
+                  if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
+                    this.value = '';
+                  } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
+                    this.value = '';
+                  } else {
+                    if (/\[day\]/.test(fields[0].name)){
+                      this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;        
+                    } else {
+                      this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+                    }
+                  }
+                });
+            });
+          $('.phonefield-us','#mc_embed_signup').each(
+            function(){
+              var fields = new Array();
+              var i = 0;
+              $(':text', this).each(
+                function(){
+                  fields[i] = this;
+                  i++;
+                });
+              $(':hidden', this).each(
+                function(){
+                  if ( fields[0].value.length != 3 || fields[1].value.length!=3 || fields[2].value.length!=4 ){
+                    this.value = '';
+                  } else {
+                    this.value = 'filled';
+                  }
+                });
+            });
+          return mce_validator.form();
+        }, 
+                    success: mce_success_cb
+                    };
+        $('#mc-embedded-subscribe-form').ajaxForm(options);
+
+
+      });
+    }
+    function mce_success_cb(resp){
+      $('#mce-success-response').hide();
+      $('#mce-error-response').hide();
+      if (resp.result=="success"){
+        $('#mce-'+resp.result+'-response').show();
+        $('#mce-'+resp.result+'-response').html(resp.msg);
+        $('#mc-embedded-subscribe-form').each(function(){
+          this.reset();
+        });
+      } else {
+        var index = -1;
+        var msg;
+        try {
+          var parts = resp.msg.split(' - ',2);
+          if (parts[1]==undefined){
+            msg = resp.msg;
+          } else {
+            i = parseInt(parts[0]);
+            if (i.toString() == parts[0]){
+              index = parts[0];
+              msg = parts[1];
+            } else {
+              index = -1;
+              msg = resp.msg;
+            }
+          }
+        } catch(e){
+          index = -1;
+          msg = resp.msg;
+        }
+        try{
+          if (index== -1){
+            $('#mce-'+resp.result+'-response').show();
+            $('#mce-'+resp.result+'-response').html(msg);            
+          } else {
+            err_id = 'mce_tmp_error_msg';
+            html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
+
+            var input_id = '#mc_embed_signup';
+            var f = $(input_id);
+            if (ftypes[index]=='address'){
+              input_id = '#mce-'+fnames[index]+'-addr1';
+              f = $(input_id).parent().parent().get(0);
+            } else if (ftypes[index]=='date'){
+              input_id = '#mce-'+fnames[index]+'-month';
+              f = $(input_id).parent().parent().get(0);
+            } else {
+              input_id = '#mce-'+fnames[index];
+              f = $().parent(input_id).get(0);
+            }
+            if (f){
+              $(f).append(html);
+              $(input_id).focus();
+            } else {
+              $('#mce-'+resp.result+'-response').show();
+              $('#mce-'+resp.result+'-response').html(msg);
+            }
+          }
+        } catch(e){
+          $('#mce-'+resp.result+'-response').show();
+          $('#mce-'+resp.result+'-response').html(msg);
+        }
+      }
+    }
+

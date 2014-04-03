@@ -6,7 +6,7 @@ module Cms
 
       params[:template] ||= 'template_1'
 
-      render "cms/#{params[:template]}"
+      render "cms/#{params[:template]}", layout: params[:layout]
     end
   end
 end
