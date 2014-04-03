@@ -6,7 +6,13 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-module TestDk
+module RailsLMS
+  class NoTokenException < Exception 
+    def message 
+      "A secret token needs to be defined in the environment"
+    end
+  end
+
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

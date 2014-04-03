@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140220054846) do
+ActiveRecord::Schema.define(version: 20140403035848) do
+
+  create_table "active_admin_comments", force: true do |t|
+    t.string   "namespace"
+    t.text     "body"
+    t.string   "resource_id",   null: false
+    t.string   "resource_type", null: false
+    t.integer  "author_id"
+    t.string   "author_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
+  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
+  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -24,8 +39,8 @@ ActiveRecord::Schema.define(version: 20140220054846) do
     t.float    "long"
     t.string   "name"
     t.string   "address"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "owner_id"
   end
 
@@ -75,6 +90,19 @@ ActiveRecord::Schema.define(version: 20140220054846) do
 
   add_index "oauth_applications", ["uid"], name: "index_oauth_applications_on_uid", unique: true
 
+  create_table "page_attributes", force: true do |t|
+    t.string   "key"
+    t.text     "value"
+    t.integer  "page_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "task_categorizations", force: true do |t|
     t.integer  "task_id"
     t.integer  "category_id"
@@ -88,11 +116,6 @@ ActiveRecord::Schema.define(version: 20140220054846) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.date     "due_date"
-  end
-
-  create_table "test_models", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
