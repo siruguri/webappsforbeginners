@@ -1,5 +1,5 @@
 ActiveAdmin.register Page do
-  permit_params(page_attributes_attributes: [:id, :key, :value, :_destroy])
+   permit_params(page_attributes_attributes: [:id, :key, :value, :_destroy])
 
   form do |f|
     f.inputs do
@@ -11,5 +11,5 @@ ActiveAdmin.register Page do
 
     f.actions
   end
-
+  
 end

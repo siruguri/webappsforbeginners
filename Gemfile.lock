@@ -203,6 +203,7 @@ GEM
     ransack (1.1.0)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
+      json (~> 1.4)
       polyamorous (~> 0.6.0)
       json (~> 1.4)
     redis (3.0.7)
