@@ -16,10 +16,9 @@ NavbarEntry.create({title:"Users", url: '/profiles'})
 urg_c=Category.create({name: 'Urgent'})
 proc_c=Category.create({name: 'Procrastinate'})
 
-
 t=Task.create({title: "Wash clothes", due_date: Date.today+1})
-t.owner = admin_u
 
+t.owner = admin_u
 t.categories << urg_c
 t.save
 
