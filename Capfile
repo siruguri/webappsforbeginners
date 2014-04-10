@@ -8,6 +8,12 @@ require 'capistrano/rails/assets'
 
 namespace :deploy do 
   desc "Symlink database.yml so precompile works"
+  task :symlink_env_file do
+    on roles(:app) do 
+      execute "ln -s #{deploy_to}/shared/.env #{release_path}/.env"
+    end
+  end
+
   task :symlink_db_yml do
     on roles(:app) do 
       execute "ln -s #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
@@ -29,6 +35,7 @@ namespace :deploy do
   end
 end
 
+before "deploy:assets:precompile", "deploy:symlink_env_file"
 before "deploy:assets:precompile", "deploy:symlink_db_yml"
 after "deploy", "deploy:symlink_db_file"
 after "deploy", "deploy:restart"

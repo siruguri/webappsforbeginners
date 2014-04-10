@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary
@@ -26,6 +27,12 @@ set :ssh_options, {
 #  forward_agent: false,
 #  auth_methods: %w(password)
 }
+
+set :default_environment, {
+  'RAILS_SECRET_TOKEN' => '90f683d8b59aab69a4b274afa8cd730f2d0fe78b2a7f96bedd414689a14dca4bb2d7dcab5463c76bca95c1a87c77fcce05bc9cd8ce3832281f3ca3d8c8ec460e'
+}
+
+set :default_run_options, {shell: "/bin/bash"}
 
 # and/or per server
 # server 'example.com',

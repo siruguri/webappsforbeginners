@@ -7,6 +7,9 @@ ruby '2.1.0'
 gem 'rails', '4.0.1'
 gem 'activeadmin', github: 'gregbell/active_admin'
 
+# Needed for proper Cap deploy with env vars
+gem 'dotenv-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
