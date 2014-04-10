@@ -43,8 +43,8 @@ gem 'resque-web', require: 'resque_web'
 gem 'resque-scheduler'
 
 group :production do
-  gem 'pg'
-  gem 'activerecord-postgresql-adapter'
+  # Need to fix this later
+  gem 'sqlite3'
 end
 
 gem 'therubyracer'
