@@ -57,7 +57,7 @@ GEM
       activesupport (>= 3.0.0)
     arel (4.0.1)
     atomic (1.1.16)
-    bcrypt-ruby (3.1.2)
+    bcrypt (3.1.7)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bourbon (3.1.8)
@@ -115,8 +115,6 @@ GEM
     ffi (1.9.3)
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
-    geocoder (1.1.9)
-    gmaps4rails (2.1.2)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -204,7 +202,9 @@ GEM
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       json (~> 1.4)
+      json (~> 1.4)
       polyamorous (~> 0.6.0)
+    rdoc (4.1.1)
       json (~> 1.4)
     redis (3.0.7)
     redis-namespace (1.4.1)
@@ -325,8 +325,6 @@ DEPENDENCIES
   factory_girl_rails
   formtastic
   formtastic-bootstrap!
-  geocoder
-  gmaps4rails
   haml-rails
   jbuilder (~> 1.2)
   jquery-rails

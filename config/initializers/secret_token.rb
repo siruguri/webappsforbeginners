@@ -11,7 +11,7 @@
 # if you're sharing your code publicly.
 
 if Rails.env.production? then
-  raise RailsLMS::NoTokenException if ENV['RAILS_SECRET_TOKEN'].nil?
+  raise RailsLMS::NoTokenException unless ENV['RAILS_SECRET_TOKEN']
   RailsLMS::Application.config.secret_key_base = ENV['RAILS_SECRET_TOKEN']
 else
   RailsLMS::Application.config.secret_key_base = '90f683d8b59aab69a4b274afa8cd730f2d0fe78b2a7f96bedd414689a14dca4bb2d7dcab5463c76bca95c1a87c77fcce05bc9cd8ce3832281f3ca3d8c8ec460e'
