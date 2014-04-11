@@ -23,8 +23,8 @@ namespace :deploy do
   desc "Symlink database to shared file"
   task :symlink_db_files do
     on roles(:app) do 
-      execute "ln -s #{deploy_to}/shared/config/development.sqlite3 #{release_path}/db/development.sqlite3"
-      execute "ln -s #{deploy_to}/shared/config/production.sqlite3 #{release_path}/db/production.sqlite3"
+      execute "ln -s #{deploy_to}/shared/db/development.sqlite3 #{release_path}/db/development.sqlite3"
+      execute "ln -s #{deploy_to}/shared/db/production.sqlite3 #{release_path}/db/production.sqlite3"
     end
   end
   
