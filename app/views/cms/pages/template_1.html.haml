@@ -1,0 +1,45 @@
+/ Template 1 begins here
+.row 
+  .col-lg-12.col-md-12.col-sm-12.col-xs-12.band3
+    .big-font.horiz-center
+      Writing web applications is easier than you think! Our 
+      courses teach you the basic concepts you need to get really
+      comfortable setting up your own favorite apps in the cloud.
+
+.row.content
+  .col-lg-12.col-md-12.col-sm-12.col-xs-12
+    .big-font
+      = raw(@page_content[:course_announcement])
+
+.row.content 
+  .col-lg-6.col-md-6.col-sm-6.col-xs-12.big-font
+    .pane
+      .heading
+        What Will I Learn?
+
+      .para
+        = raw(@page_content[:course_list])
+
+  .col-lg-6.col-md-6.col-sm-6.col-xs-12.big-font 
+    .pane
+      .heading
+        How Do I Prepare?
+
+      .para
+        You should be comfortable using software and computers, bring a laptop, and be ready to read documentation, to type a lot of code, and to spend at least <strong>12-15 hours</strong> a week doing homework.
+
+      .para.small-font
+        Course material, source code, and student logins coming soon... Check back in a few days!
+
+    .pane
+      .heading
+        Not Sure If This Is For You ?
+      .para
+        Come to one of our <a href="2-hr-workshop.html">2 Hour RoR Workshops</a>.
+
+    .pane
+      Instructor:
+      %a{href: "instructor.html"}
+        Sameer Siruguri
+
+

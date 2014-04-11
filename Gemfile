@@ -55,6 +55,8 @@ gem 'less-rails'
 
 gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
 gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4.1'
+gem 'redcarpet'
+
 gem 'formtastic', github: 'justinfrench/formtastic'
 
 gem 'formtastic-bootstrap', github: 'mjbellantoni/formtastic-bootstrap'

@@ -30,58 +30,7 @@
 
   / Main content starts here
   .container
-    .row 
-      .col-lg-12.col-md-12.col-sm-12.col-xs-12.band3
-        .big-font.horiz-center
-          Writing web applications is easier than you think! Our 
-          courses teach you the basic concepts you need to get really
-          comfortable setting up your own favorite apps in the cloud.
-
-    .row.content
-      .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        .big-font
-          Level 1 courses are now open! You can register here: in 
-          = yield
-          %a{href: "http://webappsforbeginnersoak.eventbrite.com/"}
-            Oakland
-          and in
-          %a{href: "http://webappsforbeginnerssf.eventbrite.com"}
-            San Francisco
-
-    .row.content 
-      .col-lg-6.col-md-6.col-sm-6.col-xs-12.big-font
-        .pane
-          .heading
-            What Will I Learn?
-	  
-          .para
-            This course will teach you the foundational concepts behind building web applications, using the Ruby on Rails framework to simplify the process. The course has 3 goals:
-            %ol
-              %li To build a simple web app, working with 1-2 other students to go from design to production in 12 weeks.
-              %li To empower you in navigating the abundance of free tutorials, user forums and open source code that you can exploit to go deeper into coding.
-              %li To prepare you to jump into Intermediate and Advanced level course (coming soon!)
-
-      .col-lg-6.col-md-6.col-sm-6.col-xs-12.big-font 
-        .pane
-          .heading
-            How Do I Prepare?
-	  
-          .para
-            You should be comfortable using software and computers, bring a laptop, and be ready to read documentation, to type a lot of code, and to spend at least <strong>12-15 hours</strong> a week doing homework.
-
-          .para.small-font
-            Course material, source code, and student logins coming soon... Check back in a few days!
-
-        .pane
-          .heading
-            Not Sure If This Is For You ?
-          .para
-            Come to one of our <a href="2-hr-workshop.html">2 Hour RoR Workshops</a>.
-
-        .pane
-          Instructor:
-          %a{href: "instructor.html"}
-            Sameer Siruguri
+    = yield # Go to the template for content here.
 
   / Begin MailChimp Signup Form
   .container
