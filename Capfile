@@ -38,7 +38,7 @@ end
 
 before "deploy:assets:precompile", "deploy:symlink_env_file"
 before "deploy:assets:precompile", "deploy:symlink_db_yml"
-after "deploy", "deploy:symlink_db_files"
+after "deploy:update_code", "deploy:symlink_db_files"
 after "deploy", "deploy:restart"
 after "deploy", "deploy:cleanup"
 
