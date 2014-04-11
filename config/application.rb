@@ -10,8 +10,6 @@ Bundler.require(:default, Rails.env)
 require 'dotenv'
 Dotenv.load
 
-Rails.application.routes.default_url_options[:script_name] = ActionController::Base.config.relative_url_root || '/'
-
 module RailsLMS
   class NoTokenException < Exception 
     def message 
@@ -50,4 +48,6 @@ module RailsLMS
       g.helper = false
     end
   end
+
+  RailsLMS::Application.routes.default_url_options[:script_name] = ActionController::Base.config.relative_url_root || '/'
 end

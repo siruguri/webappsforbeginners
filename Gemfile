@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 ruby '2.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails', '4.1'
 gem 'activeadmin', github: 'gregbell/active_admin'
 
 # Needed for proper Cap deploy with env vars
@@ -53,7 +53,10 @@ end
 gem 'therubyracer'
 gem 'less-rails'
 
-gem 'formtastic'
+gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
+gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4.1'
+gem 'formtastic', github: 'justinfrench/formtastic'
+
 gem 'formtastic-bootstrap', github: 'mjbellantoni/formtastic-bootstrap'
 
 group :development do
