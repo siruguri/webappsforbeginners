@@ -1,2 +1,12 @@
-%h1
-  %em #{@mesg} (temp 2)
+/ Template 1 begins here
+.row 
+  .col-lg-12.col-md-12.col-sm-12.col-xs-12.band3
+    .big-font.horiz-center
+      = raw(@page_content[:title])
+
+.row.content
+  .col-lg-12.col-md-12.col-sm-12.col-xs-12
+    .pane
+      .para
+        = raw(@page_content[:main_content])
+

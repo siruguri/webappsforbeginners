@@ -1,8 +1,14 @@
 module Cms
   class PagesController < ApplicationController
     def show
-    
-      page_id = params[:id].to_i
+
+      # id = all digits, means it's a true ID, else it's an attempted slug.
+      if /^\d+$/.match(params[:id].to_s)
+        page_id = params[:id]
+      else
+        # If there is no page with this slug, just display page 1.
+        page_id = 1 unless (page_id = Page.find_by_slug(params[:id]))
+      end
 
       @page_content = {}
 

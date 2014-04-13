@@ -192,6 +192,11 @@ li {
     display: inline-block;
     vertical-align: top;
 }
+
+.nav-entries {
+    padding: 15px 0 0 75px;
+    font-size: 1.2em;
+}
     
 
 /* Utilities */
@@ -265,6 +270,11 @@ li {
 
     .footer {
 	font-size: 0.9em;
+    }
+
+    .nav-entries {
+	padding-bottom: 15px;
+	font-size: 1em;
     }
 
 }

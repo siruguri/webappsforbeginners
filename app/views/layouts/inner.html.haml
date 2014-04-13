@@ -15,19 +15,12 @@
 %body
   .container-fluid
     .row
-      .col-lg-8.col-md-8.col-sm-12.col-xs-12.band1.verticalCenterContainer.grey-right
-
-        .vert-center Web Apps For Beginners 
-
-      .col-lg-4.col-md-4.hidden-sm
-        / This column is empty
-
-    .row
-      .col-lg-4.col-md-4.hidden-sm.nav-entries
-        %a{href: "#{@navbar_entries[0][:url]}"}
-          = @navbar_entries[0][:title]
-      .col-lg-8.col-md-8.col-sm-12.col-xs-12.band2.verticalCenterContainer.grey-right
-        .vert-center Coding with Ruby on Rails
+      .col-lg-12.col-md-12.col-sm-12.inner-band1
+        .inner-band1-section.inner-band1-section-left
+          .sectiontext
+            %a{href: "/"}Web Apps For Beginners
+        .inner-band1-section.inner-band1-section-right
+          .sectiontext Coding with Ruby on Rails
 
   / Main content starts here
   .container
