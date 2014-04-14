@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140413221718) do
+ActiveRecord::Schema.define(version: 20140414181949) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -104,6 +104,7 @@ ActiveRecord::Schema.define(version: 20140413221718) do
     t.string   "template"
     t.string   "layout"
     t.string   "slug"
+    t.boolean  "uses_md"
   end
 
   create_table "task_categorizations", force: true do |t|

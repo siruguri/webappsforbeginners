@@ -4,7 +4,7 @@ RailsLMS::Application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   # Added API and Doorkeeper
-  root to: 'cms/pages#show', id: 1,  template: 'template_2', layout: 'home'
+  root to: 'cms/pages#show', id: 1,  template: 'template_1', layout: 'home'
 
   namespace :api, defaults: {format: 'json'} do
     resources :tasks

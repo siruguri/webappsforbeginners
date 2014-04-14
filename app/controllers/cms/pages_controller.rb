@@ -28,12 +28,20 @@ module Cms
       end
 
       template = curr_pg.template
-      template ||= 'template_1'
+      template = 'template_1' if (template.nil? or template == "")
+
       layout = Page.find(page_id).layout
-      layout ||= 'home'
+      layout = 'home' if (layout.nil? or layout == "")
 
       # Populate all the attributes
-      curr_pg.page_attributes.map { |attr| @page_content[attr.key.to_sym] = md_render(attr.value) }
+      curr_pg.page_attributes.map do |attr|
+        if curr_pg.uses_md == false # Has to be explicitly set to be false
+          # Take the value raw if it's not an MD page
+          @page_content[attr.key.to_sym] = attr.value
+        else
+          @page_content[attr.key.to_sym] = md_render(attr.value)
+        end
+      end
 
       render "cms/pages/#{template}", layout: layout
     end
