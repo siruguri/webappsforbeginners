@@ -8,17 +8,11 @@ class Ability
 
     # Not logged in = can only see the tasks index page.
     if !user.id
-      can :index, Task, :owner_id => nil
+      puts ">>> No id"
+      can :read, Page, restricted: false
     else
-      if user.admin?
-        can :manage, :all
-      else
-        can :create, :all
-        can :edit, :all, :owner_id => user.id
-        can :read, :all, :owner_id => user.id
-        can :update, :all, :owner_id => user.id
-        can :destroy, :all, owner_id: user.id
-      end
+      puts ">>> id: #{user.id}"
+      can :read, Page
     end
 
     # The first argument to `can` is the action you are giving the user 

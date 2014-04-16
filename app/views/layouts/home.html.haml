@@ -14,14 +14,28 @@
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-49553224-1', 'webappsforbeginners.com');   ga('send', 'pageview');
 
 %body
+  -if flash[:notice] or flash[:alert]
+    .container
+      -if flash[:notice]
+        .alert.alert-info
+          #{flash[:notice]}
+      -if flash[:alert]
+        .alert.alert-danger
+          #{flash[:alert]}
+
   .container-fluid
     .row
       .col-lg-8.col-md-8.col-sm-12.col-xs-12.band1.verticalCenterContainer.grey-right
 
         .vert-center Web Apps For Beginners 
 
-      .col-lg-4.col-md-4.hidden-sm
-        / This column is empty
+      .col-lg-4.col-md-4.hidden-sm.band1-right
+        - if current_user
+          %li
+            = link_to 'Sign Out', destroy_user_session_path, :method => :delete
+        - else
+          %li
+            = link_to 'Sign In', new_user_session_path
 
     .row
       .col-lg-4.col-md-4.hidden-sm.nav-entries

@@ -88,6 +88,10 @@ li {
     height: 75px;
 }
 
+.band1-right li {
+    list-style: none;
+}
+
 .inner-band1 {
     font-size: 2.5em;
     height: 65px;

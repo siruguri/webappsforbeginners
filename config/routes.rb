@@ -22,4 +22,6 @@ RailsLMS::Application.routes.draw do
 
   ResqueWeb::Engine.eager_load!
   mount ResqueWeb::Engine => "/resque"
+
+  match "*path", to: "errors#catch_404", via: :all
 end

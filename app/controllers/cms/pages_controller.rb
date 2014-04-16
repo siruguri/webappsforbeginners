@@ -15,6 +15,8 @@ module Cms
         return
       end
 
+      authorize! :read, curr_pg
+
       page_id = curr_pg.id
       @page_content = {}
 
