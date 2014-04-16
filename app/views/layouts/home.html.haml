@@ -38,9 +38,13 @@
             = link_to 'Sign In', new_user_session_path
 
     .row
-      .col-lg-4.col-md-4.hidden-sm.nav-entries
-        %a{href: "#{@navbar_entries[0][:url]}"}
-          = @navbar_entries[0][:title]
+      .col-lg-4.col-md-4.hidden-sm.nav-entries.band2-left
+        %ol
+          - @navbar_entries.each do |nb|
+            %li
+              %a{href: "#{nb[:url]}"}
+                = nb[:title]
+                
       .col-lg-8.col-md-8.col-sm-12.col-xs-12.band2.verticalCenterContainer.grey-right
         .vert-center Coding with Ruby on Rails
 

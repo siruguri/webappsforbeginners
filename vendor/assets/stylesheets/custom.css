@@ -90,6 +90,14 @@ li {
 
 .band1-right li {
     list-style: none;
+    margin-top: 15px;
+}
+
+.band2-left li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px;
+    background: #d1d1e0;
 }
 
 .inner-band1 {

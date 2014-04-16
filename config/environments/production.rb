@@ -80,7 +80,7 @@ RailsLMS::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 end
 
-ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.delivery_method = :sendmail
 ActionMailer::Base.smtp_settings = {
   :address        => 'localhost',
   :domain         => 'webappsforbeginners.com',
