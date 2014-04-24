@@ -7,13 +7,14 @@ require 'capistrano/rails/migrations'
 require 'capistrano/rails/assets'
 
 namespace :deploy do 
-  desc "Symlink database.yml so precompile works"
+  desc "Symlink an ENV file for the dotenv gem"
   task :symlink_env_file do
     on roles(:app) do 
       execute "ln -s #{deploy_to}/shared/.env #{release_path}/.env"
     end
   end
 
+  desc "Symlink database.yml so precompile works"
   task :symlink_db_yml do
     on roles(:app) do 
       execute "ln -s #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
