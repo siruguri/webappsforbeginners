@@ -5,7 +5,9 @@ ruby '2.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1'
-gem 'activeadmin', github: 'gregbell/active_admin'
+
+# Admin Interface
+gem 'rails_admin'
 
 # Needed for proper Cap deploy with env vars
 gem 'dotenv-rails'

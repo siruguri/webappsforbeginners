@@ -59,7 +59,7 @@
       .col-lg-12.col-md-12.col-sm-12 
         #mc_embed_signup
           / Converting the rest of this as-is
-          <form action="http://dstrategies.us8.list-manage.com/subscribe/post?u=56eeb7fe4b4ba0b4bd232fef1&amp;id=b85b685ced" mehod="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <form action="http://webappsforbeginners.us8.list-manage2.com/subscribe/post?u=56eeb7fe4b4ba0b4bd232fef1&amp;id=b85b685ced" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <h4 style="display: inline-block;">Sign up for updates: </h4>
           <div class="mc-field-group">
           <label for="mce-EMAIL"></label>
@@ -142,7 +142,7 @@
       }
       var script = document.createElement('script');
       script.type = 'text/javascript';
-      script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+      script.src = 'https://downloads.mailchimp.com/js/jquery.form-n-validate.js';
       head.appendChild(script);
       try {
         var validatorLoaded=jQuery("#fake-form").validate({});
@@ -157,7 +157,7 @@
         var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
         var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
         $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
-        options = { url: 'http://dstrategies.us8.list-manage.com/subscribe/post-json?u=56eeb7fe4b4ba0b4bd232fef1&id=b85b685ced&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+        options = { url: 'http://webappsforbeginners.us8.list-manage.com/subscribe/post-json?u=56eeb7fe4b4ba0b4bd232fef1&id=b85b685ced&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
                     beforeSubmit: function(){
           $('#mce_tmp_error_msg').remove();
           $('.datefield','#mc_embed_signup').each(

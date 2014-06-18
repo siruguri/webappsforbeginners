@@ -1,7 +1,8 @@
 RailsLMS::Application.routes.default_url_options[:script_name] = ActionController::Base.config.relative_url_root || '/'
 
 RailsLMS::Application.routes.draw do
-  ActiveAdmin.routes(self)
+
+  mount RailsAdmin::Engine => '/rails_admin', as: 'rails_admin'
   devise_for :users
   # Added API and Doorkeeper
   root to: 'cms/pages#show', id: 1,  template: 'template_1', layout: 'home'
