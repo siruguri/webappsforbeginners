@@ -11,6 +11,7 @@ gem 'rails_admin'
 
 # Needed for proper Cap deploy with env vars
 gem 'dotenv-rails'
+gem 'seed_dump'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -48,8 +49,7 @@ gem 'resque-web', require: 'resque_web'
 gem 'resque-scheduler'
 
 group :production do
-  # Need to fix this later
-  gem 'sqlite3'
+  gem 'pg'
 end
 
 gem 'therubyracer'
