@@ -49,7 +49,7 @@ gem 'resque-web', require: 'resque_web'
 gem 'resque-scheduler'
 
 group :production do
-  gem 'sqlite3'
+  gem 'pg'
 end
 
 gem 'therubyracer'
